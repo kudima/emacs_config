@@ -30,6 +30,11 @@
 (require 'evil)
 (evil-mode 1)
 
+;; display line numbers when editing recognized programming language file
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
+;; make completion case sensitive
+(setq dabbrev-case-fold-search nil)
+
 (setq evil-ex-search-case 'sensitive)
 (setq case-fold-search nil)
 ;; to treat symbols as words during search (including _)
